@@ -1,17 +1,16 @@
-name: CI Workflow
+name: Deployment
 
 on:
   push:
     branches:
-      - main
+      - agile
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Run CI
-        run: echo "Build & Test Successful!"
+      - name: Deploy
+        run: echo "Deployment successful!"
